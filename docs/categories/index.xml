@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Hugo Pipes with Bootstrap Example</title>
+    <link>https://marcanuy.github.io/hugo-pipes-bootstrap/categories/</link>
+    <description>Recent content in Categories on Hugo Pipes with Bootstrap Example</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2018, Marcelo Canina</copyright>
+    
+	<atom:link href="https://marcanuy.github.io/hugo-pipes-bootstrap/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Development</title>
+      <link>https://marcanuy.github.io/hugo-pipes-bootstrap/categories/development/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugo-pipes-bootstrap/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://marcanuy.github.io/hugo-pipes-bootstrap/categories/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugo-pipes-bootstrap/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
