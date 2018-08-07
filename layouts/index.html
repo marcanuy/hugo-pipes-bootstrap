@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{.Description}}">
+    <meta name="author" content="{{.Site.Author}}">
+
+    <title>{{.Site.Title}}</title>
+
+    {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/simpleit/node_modules")) }}
+    {{ $style := resources.Get "sass/main.scss" | toCSS $options | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" >
+
+  </head>
+
+  <body>
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">{{.Site.Title}}</h1>
+          <p class="lead text-muted">{{.Description}}</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Hey look! I am using Bootstrap</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p>I am an example website to show how to use Bootstrap with Hugo</p>
+        <p>Have a look at Github's repo: <a href="{{.Site.BaseURL}}">{{.Site.BaseURL}}</a>.</p>
+      </div>
+    </footer>
+
+    {{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
+    {{ $popperjs := resources.Get "js/vendor/popper.min.js" }}
+    {{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
+    {{ $js := slice $jquery $popperjs $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
+
+    <script src="{{$js.Permalink}}"></script>
+  </body>
+</html>
