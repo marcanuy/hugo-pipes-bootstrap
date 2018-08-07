@@ -11,7 +11,7 @@
 
     {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/simpleit/node_modules")) }}
     {{ $style := resources.Get "sass/main.scss" | toCSS $options | postCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" >
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" >
 
   </head>
 
@@ -41,6 +41,6 @@
     {{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
     {{ $js := slice $jquery $popperjs $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
 
-    <script src="{{$js.Permalink}}"></script>
+    <script src="{{$js.RelPermalink}}"></script>
   </body>
 </html>
