@@ -1,4 +1,4 @@
-baseurl = "https://marcanuy.com/"
+baseurl = "https://marcanuy.github.io/hugo-pipes-bootstrap/"
 title = "Hugo Pipes with Bootstrap Example"
 author = "Marcelo Canina"
 copyright = "Copyright © 2018, Marcelo Canina"

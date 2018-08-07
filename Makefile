@@ -5,5 +5,9 @@ build-js:
 	cp node_modules/jquery/dist/jquery.min.js $(ASSETS_DIR)
 	cp node_modules/popper.js/dist/umd/popper.min.js $(ASSETS_DIR)
 	cp node_modules/bootstrap/dist/js/bootstrap.min.js $(ASSETS_DIR)
+build: build-js
+	$(HUGO)
+serve: build-js
+	$(HUGO) server
 generate-githubpages:
 	rm -fr docs && HUGO_ENV=production $(HUGO) --baseURL https://marcanuy.github.io/hugo-pipes-bootstrap/ && mv public docs && touch docs/.nojekyll
