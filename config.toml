@@ -1,0 +1,7 @@
+baseurl = "https://marcanuy.com/"
+title = "Hugo Pipes with Bootstrap Example"
+author = "Marcelo Canina"
+copyright = "Copyright © 2018, Marcelo Canina"
+canonifyurls = true
+
+
